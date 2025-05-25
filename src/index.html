@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/assets/Netflix_Symbol_RGB.png" type="image/x-icon">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  </head>
+  <body class="overflow-x-hidden">
+
+    <header class="bg-[url('/assets/netfilxbg.jpg')] bg-cover bg-center h-screen bg-no-repeat overflow-hidden">
+      <div class="absolute inset-0 bg-black/75"></div> <!-- dark layer -->
+      <nav class="relative flex items-center justify-between px-5 py-4 lg:px-35 lg:py-2">
+        <div class="w-30 h-12 flex lg:w-43 lg:h-20">
+          <img src="/assets/asset 0.png" alt="#" />
+        </div>
+        <div class="flex justify-between items-center gap-4">
+          <button class="pl-2 relative border border-neutral-500 text-white flex items-center p-1 w-35 h-8 justify-start gap-2" style="border-radius: 4px">
+            <img class="w-5 h-5 filter invert" src="/assets/asset 15.svg" alt="#"/>
+            <select class="w-[142px] h-9 absolute -left-0.5 pl-9 appearance-none cursor-pointer">
+              <!-- appearance-none: remove caret down of select -->
+              <option value="#">Tiếng Việt</option>
+              <option value="#">English</option>
+            </select>
+            <i class="fa-solid fa-caret-down absolute right-3"></i>
+          </button>
+          <button class="text-white bg-red-600 py-4 w-30 h-8 flex items-center pl-5 font-bold hover:bg-red-700" style="border-radius: 4px">
+            <p>Đăng nhập</p>
+          </button>
+        </div>
+      </nav>
+      <div id="start" class="relative text-white flex flex-col items-center mt-[100px] px-29 lg:mt-[50px]">
+        <h1 class="font-bold text-[32px] w-110 text-center lg:text-6xl lg:w-150">
+          Phim, series không giới hạn và nhiều nội dung khác
+        </h1>
+        <p class="mt-2 mb-4 font-semibold lg:text-2xl lg:mt-5 lg:mb-8">
+          Giá từ 70.000 ₫. Hủy bất kỳ lúc nào.
+        </p>
+        <h2 class="font text-center font-semibold w-110 lg:w-150">
+          Bạn đã sẵn sàng xem chưa? Nhập email để tạo hoặc kích hoạt lại tư cách
+          thành viên của bạn.
+        </h2>
+        <div id="btn" class="flex mt-4 gap-4 mb-10">
+          <div class="relative w-64 lg:w-100">
+            <input type="text" id="email" placeholder=" " class="peer w-full border border-gray-400 rounded-md px-3 pt-5 pb-2"/>
+            <label for="email" class="absolute left-3 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm">
+              Địa chỉ email
+            </label>
+          </div>
+          <button class="h-13 w-40 text-2xl bg-red-600 flex justify-center items-center gap-5 cursor-pointer hover:bg-red-700" style="border-radius: 4px">
+            <p>Bắt Đầu</p>
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Curved Line -->
+      <div class="flex justify-center w-[1000px] relative">
+        <div id="BorDer" class="absolute p-1 -left-557 top-15 w-[5800px] h-[5800px] bg-gradient-to-r from-pink-900 via-red-600 to-pinkfrom-pink-900 rounded-full">
+          <div class="absolute top-2 -left-19">
+            <div id="circle" class="bg-black w-[5950px] h-[5900px] rounded-full overflow-hidden flex justify-center relative">
+              <div id="shadow" class="w-200 h-140 rounded-full bg-blue-600 absolute -top-130 blur-lg" style="opacity: 0.3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="bg-black">
+      <!-- Trending -->
+      <h1 class="text-[2vw] text-white font-bold pl-[10vw]">Hiện đang thịnh hành</h1>
+      <div id="Trending" class="pt-5 flex gap-5 w-[85vw] pl-35 items-center">
+        <button id="prev" class="bg-gray-800 text-gray-500 w-5 h-20 rounded-lg hidden hover:bg-gray-700">
+          <i class="fa-solid fa-caret-left"></i>
+        </button>
+        <div id="container" class="w-full flex gap-8 overflow-hidden h-full pl-4">
+          <div class="flex-shrink-0 hover:scale-[1.1] transition ease-in relative w-50 h-full">
+            <div class="absolute text-[8vw] text-black -left-5 -bottom-3 [text-shadow:-1px_-1px_0_white,1px_-1px_0_white,-1px_1px_0_white,1px_1px_0_white]">1</div>            
+            <img src="/assets/asset 12.webp" class="pic rounded-3xl p-3 w-50 h-68" data-id="1" alt="">
+          </div>
+          <div class="flex-shrink-0 hover:scale-[1.1] transition ease-in relative w-50 h-full">
+            <div class="absolute text-[8vw] text-black -left-5 -bottom-3 [text-shadow:-1px_-1px_0_white,1px_-1px_0_white,-1px_1px_0_white,1px_1px_0_white]">2</div>
+            <img src="/assets/asset 2.webp" class="rounded-3xl p-3 pic" data-id="2" alt="">
+          </div>
+          <div class="flex-shrink-0 hover:scale-[1.1] transition ease-in relative w-50 h-full">
+            <div class="absolute text-[8vw] text-black -left-5 -bottom-3 [text-shadow:-1px_-1px_0_white,1px_-1px_0_white,-1px_1px_0_white,1px_1px_0_white]">3</div>
+            <img src="/assets/asset 3.webp" class="rounded-3xl p-3 pic" data-id="3" alt="">
+          </div>
+          <div class="flex-shrink-0 hover:scale-[1.1] transition ease-in relative w-50 h-full">
+            <div class="absolute text-[8vw] text-black -left-5 -bottom-3 [text-shadow:-1px_-1px_0_white,1px_-1px_0_white,-1px_1px_0_white,1px_1px_0_white]">4</div>
+            <img src="/assets/asset 4.webp" class="rounded-3xl p-3 pic" data-id="4" alt="">
+          </div>
+          <div class="flex-shrink-0 hover:scale-[1.1] transition ease-in relative w-50 h-full">
+            <div class="absolute text-[8vw] text-black -left-5 -bottom-3 [text-shadow:-1px_-1px_0_white,1px_-1px_0_white,-1px_1px_0_white,1px_1px_0_white]">5</div>
+            <img src="/assets/asset 5.webp" class="rounded-3xl p-3 pic" data-id="5" alt="">
+          </div>
+          <div class="flex-shrink-0 hover:scale-[1.1] transition ease-in relative w-50 h-full">
+            <div class="absolute text-[8vw] text-black -left-5 -bottom-3 [text-shadow:-1px_-1px_0_white,1px_-1px_0_white,-1px_1px_0_white,1px_1px_0_white]">6</div>
+            <img src="/assets/asset 6.webp" class="rounded-3xl p-3 pic" data-id="6" alt="">
+          </div>
+          <div class="flex-shrink-0 hover:scale-[1.1] transition ease-in relative w-50 h-full">
+            <div class="absolute text-[8vw] text-black -left-5 -bottom-3 [text-shadow:-1px_-1px_0_white,1px_-1px_0_white,-1px_1px_0_white,1px_1px_0_white]">7</div>
+            <img src="/assets/asset 7.webp" class="rounded-3xl p-3 pic" data-id="7" alt="">
+          </div>
+          <div class="flex-shrink-0 hover:scale-[1.1] transition ease-in relative w-50 h-full">
+            <div class="absolute text-[8vw] text-black -left-5 -bottom-3 [text-shadow:-1px_-1px_0_white,1px_-1px_0_white,-1px_1px_0_white,1px_1px_0_white]">8</div>
+            <img src="/assets/asset 8.webp" class="rounded-3xl p-3 pic" data-id="81" alt="">
+          </div>
+          <div class="flex-shrink-0 hover:scale-[1.1] transition ease-in relative w-50 h-full">
+            <div class="absolute text-[8vw] text-black -left-5 -bottom-3 [text-shadow:-1px_-1px_0_white,1px_-1px_0_white,-1px_1px_0_white,1px_1px_0_white]">9</div>
+            <img src="/assets/asset 9.webp" class="rounded-3xl p-3 pic" data-id="9" alt="">
+          </div>
+          <div class="flex-shrink-0 hover:scale-[1.1] transition ease-in relative w-50 h-full">
+            <div class="absolute text-[8vw] text-black -left-5 -bottom-3 [text-shadow:-1px_-1px_0_white,1px_-1px_0_white,-1px_1px_0_white,1px_1px_0_white]">10</div>
+            <img src="/assets/asset 10.webp" class="rounded-3xl p-3 pic" data-id="10" alt="">
+          </div>
+        </div>
+        <button id="next" class="bg-gray-800 text-gray-500 w-5 h-20 rounded-lg hover:bg-gray-700">
+          <i class="fa-solid fa-caret-right"></i>
+        </button>
+        <!-- Top 1 -->
+        <div id="info-1" class="absolute left-90 w-[50%] h-[90%] bg-white rounded-2xl overflow-hidden z-10 hidden">
+          <div class="absolute inset-0 bg-black/60">
+            <div class="absolute inset-100 top-50 left-0 w-full bg-black/60 blur-2xl"></div>
+            <div class="absolute inset-140 top-0 -left-20 h-full bg-black/60 blur-3xl"></div>
+          </div>
+          <div class="w-full h-full">
+            <img src="/assets/images12.jpg" class="w-full h-[50%]" alt="">
+            <button class="close-btn absolute m-2 text-center text-white top-0 right-0">
+              <i class="fa-solid fa-xmark text-3xl"></i>
+            </button>
+          </div>
+          <div class="w-full h-30 absolute top-65 z-20">
+            <img src="/assets/Venom_The_Last_Dance_logo.png" class="w-70 h-30 pl-10" alt="">
+          </div>
+          <div id="content" class="w-full h-full top-81 absolute">
+            <div id="btns" class="w-full h-full bg-black opacity-92 flex flex-col pl-10">
+              <div class="w-full h-22 pt-15 flex gap-5">
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">2024</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">T16</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Phim</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Hành động</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Khoa học viễn tưởng</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Phiêu lưu</div>
+              </div>
+              <p class="text-white mb-8 mt-6 ">Vẫn đang chạy trốn, nhà báo Eddie Brock và cộng sự ngoài hành tinh Venom tránh khỏi những mối đe dọa từ một chỉ huy quân sự cảnh giác và những symbiote xâm lược tàn nhẫn.</p>
+              <button class="h-13 w-40 text-2xl text-white bg-red-600 flex justify-center items-center gap-5 cursor-pointer hover:bg-red-700" style="border-radius: 4px">
+                <p>Bắt Đầu</p>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Top 2 -->
+        <div id="info-2" class="absolute left-90 w-[50%] h-[90%] bg-white rounded-2xl overflow-hidden z-10 hidden">
+          <div class="absolute inset-0 bg-black/20">
+            <div class="absolute inset-100 top-50 left-0 w-full bg-black/60 blur-2xl"></div>
+            <div class="absolute inset-140 top-0 -left-20 h-full bg-black/60 blur-3xl"></div>
+          </div>
+          <div  class="w-full h-full ">
+            <img src="/assets/images2.png" class="w-full h-[50%]" alt="">
+            <button class="close-btn absolute m-2 text-center text-white  top-0 right-0">
+              <i class="fa-solid fa-xmark text-3xl"></i>
+            </button>
+          </div>
+          <div class="w-full h-30 absolute top-60 z-20">
+            <img src="/assets/Evil.png" class="w-70 h-30 pl-10" alt="">
+          </div>
+          <div id="content" class="w-full h-full top-81 absolute">
+            <div id="btns" class="w-full h-full bg-black opacity-92 flex flex-col pl-10">
+              <div class="w-full h-22 pt-15 flex gap-5">
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">2024</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">T18</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Chương trình</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Kinh dị</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Phim chính kịch</div>
+              </div>
+              <p class="text-white mb-8 mt-6 ">Ở một khu vực hẻo lánh của thị trấn, vị đầu bếp bí ẩn nọ nấu các bữa ăn siêu nhiên có thể đáp ứng những khao khát thầm kín nhất của thực khách... nếu họ sẵn sàng trả giá.</p>
+              <button class="h-13 w-40 text-2xl text-white bg-red-600 flex justify-center items-center gap-5 cursor-pointer hover:bg-red-700" style="border-radius: 4px">
+                <p>Bắt Đầu</p>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Top 3 -->
+        <div id="info-3" class="absolute left-90 w-[50%] h-[90%] bg-white rounded-2xl overflow-hidden z-10 hidden">
+          <div class="absolute inset-0 bg-black/20">
+            <div class="absolute inset-100 top-50 left-0 w-full bg-black/60 blur-2xl"></div>
+            <div class="absolute inset-140 top-0 -left-20 h-full bg-black/60 blur-3xl"></div>
+          </div>
+          <div  class="w-full h-full ">
+            <img src="/assets/images3.png" class="w-full h-[50%]" alt="">
+            <button class="close-btn absolute m-5 text-center text-white top-0 right-0">
+              <i class="fa-solid fa-xmark text-3xl"></i>
+            </button>
+          </div>
+          <div class="w-full h-30 absolute top-72 z-20">
+            <img src="/assets/squid.png" class="w-100 h-15 pl-10" alt="">
+          </div>
+          <div id="content" class="w-full h-full top-81 absolute">
+            <div id="btns" class="w-full h-full bg-black opacity-92 flex flex-col pl-10">
+              <div class="w-full h-22 pt-15 flex gap-3">
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">2024</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">T18</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Chương trình</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Giật gân</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Phim chính kịch</div>
+              </div>
+              <p class="text-white mb-8 mt-6 ">Hàng trăm người chơi kẹt tiền chấp nhận một lời mời kỳ lạ: thi đấu trong các trò chơi trẻ con. Đón chờ họ là một giải thưởng hấp dẫn - và những rủi ro chết người.</p>
+              <button class="h-13 w-40 text-2xl text-white bg-red-600 flex justify-center items-center gap-5 cursor-pointer hover:bg-red-700" style="border-radius: 4px">
+                <p>Bắt Đầu</p>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+         <!-- Top 4 -->
+         <div id="info-4" class="absolute left-90 w-[50%] h-[90%] bg-white rounded-2xl overflow-hidden z-10 hidden">
+          <div class="absolute inset-0 bg-black/40">
+            <div class="absolute inset-100 top-50 left-0 w-full bg-black/60 blur-2xl"></div>
+            <div class="absolute inset-140 top-0 -left-20 h-full bg-black/60 blur-3xl"></div>
+          </div>
+          <div  class="w-full h-full ">
+            <img src="/assets/images4.png" class="w-full h-[50%]" alt="">
+            <button class="close-btn absolute m-5 text-center text-white top-0 right-0">
+              <i class="fa-solid fa-xmark text-3xl"></i>
+            </button>
+          </div>
+          <div class="w-full h-30 absolute top-72 z-20">
+            <img src="/assets/MAI.png" class="w-60 h-15 pl-10" alt="">
+          </div>
+          <div id="content" class="w-full h-full top-81 absolute">
+            <div id="btns" class="w-full h-full bg-black opacity-92 flex flex-col pl-10">
+              <div class="w-full h-22 pt-15 flex gap-4">
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">2024</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">T16</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Phim</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Lãng mạn</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Phim chính kịch</div>
+              </div>
+              <p class="text-white mb-8 mt-6 ">Khi một người mẹ đơn thân đang gặp khó khăn phải lòng một chàng trai đào hoa nhà giàu, chuyện tình đầy rủi ro ấy có thể thay đổi cuộc đời họ... hoặc tàn phá thế giới của cả hai.</p>
+              <button class="h-13 w-40 text-2xl text-white bg-red-600 flex justify-center items-center gap-5 cursor-pointer hover:bg-red-700" style="border-radius: 4px">
+                <p>Bắt Đầu</p>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Top 5 -->
+        <div id="info-5" class="absolute left-90 w-[50%] h-[90%] bg-white rounded-2xl overflow-hidden z-10 hidden">
+          <div class="absolute inset-0 bg-black/60">
+            <div class="absolute inset-100 top-50 left-0 w-full bg-black/60 blur-2xl"></div>
+            <div class="absolute inset-140 top-0 -left-20 h-full bg-black/60 blur-3xl"></div>
+          </div>
+          <div  class="w-full h-full ">
+            <img src="/assets/images5.png" class="w-full h-[50%]" alt="">
+            <button class="close-btn absolute m-5 text-center text-white top-0 right-0">
+              <i class="fa-solid fa-xmark text-3xl"></i>
+            </button>
+          </div>
+          <div class="w-full h-30 absolute top-65 z-20">
+            <img src="/assets/HealthCare.png" class="w-95 h-25 pl-10" alt="">
+          </div>
+          <div id="content" class="w-full h-full top-81 absolute">
+            <div id="btns" class="w-full h-full bg-black opacity-92 flex flex-col pl-10">
+              <div class="w-full h-22 pt-15 flex gap-4">
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">2025</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">T16</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Chương trình</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Phim chính kịch</div>
+              </div>
+              <p class="text-white mb-8 mt-6 ">Để lập Trung tâm Chăm sóc Chấn thương hàng đầu, một bác sĩ dày dạn chiến trường, cộc cằn nhưng tài ba, dẫn dắt đội ngũ của mình trở thành các chiến binh cứu người dám nghĩ dám làm.</p>
+              <button class="h-13 w-40 text-2xl text-white bg-red-600 flex justify-center items-center gap-5 cursor-pointer hover:bg-red-700" style="border-radius: 4px">
+                <p>Bắt Đầu</p>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Top 6 -->
+        <div id="info-6" class="absolute left-90 w-[50%] h-[90%] bg-white rounded-2xl overflow-hidden z-10 hidden">
+          <div class="absolute inset-0 bg-black/40">
+            <div class="absolute inset-100 top-50 left-0 w-full bg-black/60 blur-2xl"></div>
+            <div class="absolute inset-140 top-0 -left-20 h-full bg-black/60 blur-3xl"></div>
+          </div>
+          <div  class="w-full h-full ">
+            <img src="/assets/images6.png" class="w-full h-[50%]" alt="">
+            <button class="close-btn absolute m-5 text-center text-white top-0 right-0">
+              <i class="fa-solid fa-xmark text-3xl"></i>
+            </button>
+          </div>
+          <div class="w-full h-30 absolute top-70 z-20">
+            <img src="/assets/SakamotoDays.png" class="w-90 h-18 pl-10" alt="">
+          </div>
+          <div id="content" class="w-full h-full top-81 absolute">
+            <div id="btns" class="w-full h-full bg-black opacity-92 flex flex-col pl-10">
+              <div class="w-full h-22 pt-15 flex gap-4">
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">2025</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">T16</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Chương trình</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Hài</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Hành động</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Anime</div>
+              </div>
+              <p class="text-white mb-8 mt-6 ">Từng là sát thủ vĩ đại nhất, Sakamoto Taro giờ rửa tay gác kiếm vì tình yêu. Nhưng khi quá khứ tìm đến, anh phải chiến đấu để bảo vệ gia đình thân yêu của mình.</p>
+              <button class="h-13 w-40 text-2xl text-white bg-red-600 flex justify-center items-center gap-5 cursor-pointer hover:bg-red-700" style="border-radius: 4px">
+                <p>Bắt Đầu</p>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Top 7 -->
+        <div id="info-7" class="absolute left-90 w-[50%] h-[90%] bg-white rounded-2xl overflow-hidden z-10 hidden">
+          <div class="absolute inset-0 bg-black/40">
+            <div class="absolute inset-100 top-50 left-0 w-full bg-black/60 blur-2xl"></div>
+            <div class="absolute inset-140 top-0 -left-20 h-full bg-black/60 blur-3xl"></div>
+          </div>
+          <div  class="w-full h-full">
+            <img src="/assets/images7.png" class="w-full h-[50%]" alt="">
+            <button class="close-btn absolute m-5 text-center text-white top-0 right-0">
+              <i class="fa-solid fa-xmark text-3xl"></i>
+            </button>
+          </div>
+          <div class="w-full h-30 absolute top-72 z-20">
+            <img src="/assets/BadLie.png" class="w-120 h-15 pl-10" alt="">
+          </div>
+          <div id="content" class="w-full h-full top-80 absolute">
+            <div id="btns" class="w-full h-full bg-black opacity-92 flex flex-col pl-10">
+              <div class="w-full h-22 pt-15 flex gap-4">
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">2023</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">T18</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Phim</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Hài</div>
+              </div>
+              <p class="text-white mb-8 mt-6 ">Khi kẻ lừa đảo nợ nần chồng chất tình cờ gặp kẻ lừa đảo lão làng, mối ác cảm giữa họ nhanh chóng biến thành màn hợp tác không ngờ tới để thực hiện phi vụ lừa đảo siêu lớn.</p>
+              <button class="h-13 w-40 text-2xl text-white bg-red-600 flex justify-center items-center gap-5 cursor-pointer hover:bg-red-700" style="border-radius: 4px">
+                <p>Bắt Đầu</p>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Top 8 -->
+        <div id="info-8" class="absolute left-90 w-[50%] h-[90%] bg-white rounded-2xl overflow-hidden z-10 hidden">
+          <div class="absolute inset-0 bg-black/50">
+            <div class="absolute inset-100 top-50 left-0 w-full bg-black/60 blur-2xl"></div>
+            <div class="absolute inset-140 top-0 -left-20 h-full bg-black/60 blur-3xl"></div>
+          </div>
+          <div  class="w-full h-full">
+            <img src="/assets/images8.png" class="w-full h-[50%]" alt="">
+            <button class="close-btn absolute m-5 text-center text-white top-0 right-0">
+              <i class="fa-solid fa-xmark text-3xl"></i>
+            </button>
+          </div>
+          <div class="w-full h-30 absolute top-72 z-20">
+            <img src="/assets/Grandma.png" class="w-120 h-15 pl-10" alt="">
+          </div>
+          <div id="content" class="w-full h-full top-80 absolute">
+            <div id="btns" class="w-full h-full bg-black opacity-92 flex flex-col pl-10">
+              <div class="w-full h-22 pt-15 flex gap-4">
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">2024</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">K</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Phim</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Phim chính kịch</div>
+              </div>
+              <p class="text-white mb-8 mt-6 ">Một sinh viên bỏ học quyết định chăm sóc người bà ốm yếu, hi vọng chiếm được cảm tình và cuối cùng là tài sản thừa kế của bà.</p>
+              <button class="h-13 w-40 text-2xl text-white bg-red-600 flex justify-center items-center gap-5 cursor-pointer hover:bg-red-700" style="border-radius: 4px">
+                <p>Bắt Đầu</p>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Top 9 -->
+        <div id="info-9" class="absolute left-90 w-[50%] h-[90%] bg-white rounded-2xl overflow-hidden z-10 hidden">
+          <div class="absolute inset-0 bg-black/50">
+            <div class="absolute inset-100 top-50 left-0 w-full bg-black/60 blur-2xl"></div>
+            <div class="absolute inset-140 top-0 -left-20 h-full bg-black/60 blur-3xl"></div>
+          </div>
+          <div  class="w-full h-full">
+            <img src="/assets/images9.png" class="w-full h-[70%]" alt="">
+            <button class="close-btn absolute m-5 text-center text-white top-0 right-0">
+              <i class="fa-solid fa-xmark text-3xl"></i>
+            </button>
+          </div>
+          <div class="w-full h-30 absolute top-65 z-20">
+            <img src="/assets/Mada.png" class="w-80 h-20 pl-10" alt="">
+          </div>
+          <div id="content" class="w-full h-full top-80 absolute">
+            <div id="btns" class="w-full h-full bg-black opacity-92 flex flex-col pl-10">
+              <div class="w-full h-22 pt-15 flex gap-4">
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">2025</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">K18</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Phim</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Phim kinh dị</div>
+              </div>
+              <p class="text-white mb-8 mt-6 ">Làm nghề vớt xác ở sông Mê Kông, người phụ nữ nọ đối mặt với nỗi kinh hoàng thực sự khi một hồn ma kéo con gái cô xuông sông.</p>
+              <button class="h-13 w-40 text-2xl text-white bg-red-600 flex justify-center items-center gap-5 cursor-pointer hover:bg-red-700" style="border-radius: 4px">
+                <p>Bắt Đầu</p>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Top 10 -->
+        <div id="info-10" class="absolute left-90 w-[50%] h-[90%] bg-black rounded-2xl overflow-hidden z-10 hidden">
+          <div class="absolute inset-0 bg-black/10">
+            <div class="absolute inset-100 top-50 left-0 w-full bg-black/60 blur-2xl"></div>
+            <div class="absolute inset-140 top-0 -left-20 h-full bg-black/60 blur-3xl"></div>
+          </div>
+          <div  class="w-full h-full">
+            <img src="/assets/images10.png" class="w-full h-[70%]" alt="">
+            <button class="close-btn absolute m-5 text-center text-white top-0 right-0">
+              <i class="fa-solid fa-xmark text-3xl"></i>
+            </button>
+          </div>
+          <div class="w-full h-30 absolute top-70 z-20">
+            <img src="/assets/LoveMuBi.png" class="w-[500px] h-20 pl-10" alt="">
+          </div>
+          <div id="content" class="w-full h-full top-80 absolute">
+            <div id="btns" class="w-full h-full bg-black opacity-92 flex flex-col pl-10">
+              <div class="w-full h-22 pt-15 flex gap-4">
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">2025</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">K16</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Chính kịch</div>
+                <div class="px-2 pt-1 text-gray-400 bg-gray-600" style="border-radius: 5px;">Phim lãng mạn</div>
+              </div>
+              <p class="text-white mb-8 mt-6 ">Một tín đồ phim ảnh phải lòng một đạo diễn triển vọng, thắp lên chuyện tình lãng mạn nhưng sớm vụn vỡ. Khi các con đường của cả hai lại giao thoa, liệu họ có thể tìm lại tình yêu? </p>
+              <button class="h-13 w-40 text-2xl text-white bg-red-600 flex justify-center items-center gap-5 cursor-pointer hover:bg-red-700" style="border-radius: 4px">
+                <p>Bắt Đầu</p>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Options -->
+      <h1 class="text-[2vw] text-white font-bold pl-[10vw] mt-15">Thêm lý do để tham gia</h1>
+      <div id="options" class="flex w-[80vw] h-[35vw] mx-auto mt-5 gap-5">
+        <div id="card" class="relative gap-5 flex flex-col w-full h-95 rounded-2xl bg-gradient-to-b from-[#121221] via-[#080e1e] to-[#1b113b] p-5">
+          <h1 class="text-white text-2xl font-bold">
+            Thưởng thức trên TV của bạn
+          </h1>
+          <p class="text-gray-300">
+            Xem trên TV thông minh, Playstation, Xbox, Chromecast, Apple TV, đầu
+            phát Blu-ray và nhiều thiết bị khác.
+          </p>
+          <div id="picture" class="absolute bottom-5 right-5">
+            <img src="/assets/asset 18.svg" alt="" />
+          </div>
+        </div>
+        <div id="card" class="relative gap-5 flex flex-col w-full h-95 rounded-2xl bg-gradient-to-b from-[#121221] via-[#080e1e] to-[#1b113b] p-5">
+          <h1 class="text-white text-2xl font-bold">
+            Tải xuống nội dung để xem ngoại tuyến
+          </h1>
+          <p class="text-gray-300">
+            Lưu lại những nội dung yêu thích một cách dễ dàng và luôn có thứ để
+            xem.
+          </p>
+          <div id="picture" class="absolute bottom-5 right-5">
+            <img src="/assets/asset 19.svg" alt="" />
+          </div>
+        </div>
+        <div id="card" class="relative gap-5 flex flex-col w-full h-95 rounded-2xl bg-gradient-to-b from-[#121221] via-[#080e1e] to-[#1b113b] p-5">
+          <h1 class="text-white text-2xl font-bold">Xem ở mọi nơi</h1>
+          <p class="text-gray-300">
+            Phát trực tuyến không giới hạn phim và series trên điện thoại, máy
+            tính bảng, máy tính xách tay và TV.
+          </p>
+          <div id="picture" class="absolute bottom-5 right-5">
+            <img src="/assets/asset 20.svg" alt="" />
+          </div>
+        </div>
+        <div id="card" class="relative gap-5 flex flex-col w-full h-95 rounded-2xl bg-gradient-to-b from-[#121221] via-[#080e1e] to-[#1b113b] p-5">
+          <h1 class="text-white text-2xl font-bold">Tạo hồ sơ cho trẻ em</h1>
+          <p class="text-gray-300">
+            Đưa các em vào những cuộc phiêu lưu với nhân vật được yêu thích
+            trong một không gian riêng. Tính năng này đi kèm miễn phí với tư
+            cách thành viên của bạn.
+          </p>
+          <div id="picture" class="absolute bottom-5 right-5">
+            <img src="/assets/asset 21.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Questions -->
+      <h1 class="text-[2vw] text-white font-bold pl-[10vw]">Câu hỏi thường gặp</h1>
+      <div class="w-[80vw] mx-auto mt-4">
+        <div id="questions" class="grid grid-cols-1 gap-2">
+          <!-- Group 1 -->
+          <div class="group bg-[#2d2d2d] text-white">
+            <dt class="flex justify-between items-center text-[2vw] hover:bg-[#555555] p-5 border-2 border-black" aria-controls="faq-1">
+              <p >Netflix là gì?</p>
+              <i class="fa-solid fa-plus transition ease-in"></i>
+            </dt>
+            <dd id="faq-1" class="hidden text-lg font-light mt-6">
+              <p class="text-[2vw] px-5 pb-5">
+                Netflix là dịch vụ phát trực tuyến mang đến đa dạng các loại series, phim, anime, phim tài liệu đoạt giải thưởng và nhiều nội dung khác trên hàng nghìn thiết bị có kết nối Internet.
+                Bạn có thể xem bao nhiêu tùy thích, bất cứ lúc nào bạn muốn mà không gặp phải một quảng cáo nào - tất cả chỉ với một mức giá thấp hàng tháng. Luôn có những nội dung mới để bạn khám phá và những series, phim mới được bổ sung mỗi tuần!</p>
+            </dd>
+          </div>
+          <!-- Group 2 -->
+          <div class="group bg-[#2d2d2d] text-white">
+            <dt class="flex justify-between items-center text-[2vw] hover:bg-[#555555] p-5 border-2 border-black" aria-controls="faq-2">
+              <p>Tôi phải trả bao nhiêu tiền để xem Netflix?</p>
+              <i class="fa-solid fa-plus transition ease-in"></i>
+            </dt>
+            <dd id="faq-2" class="hidden text-lg font-light mt-6">
+              <p class="text-[2vw] px-5 pb-5" > Xem Netflix trên điện thoại thông minh, máy tính bảng, TV thông minh, máy tính xách tay hoặc thiết bị phát trực tuyến, chỉ với một khoản phí cố định hàng tháng. Các gói dịch vụ với mức giá từ 70.000 ₫ đến 260.000 ₫ mỗi tháng. Không phụ phí, không hợp đồng.</p>
+            </dd>
+          </div>
+          <!-- Group 3 -->
+          <div class="group bg-[#2d2d2d] text-white">
+            <dt class="flex justify-between items-center text-[2vw] hover:bg-[#555555] p-5 border-2 border-black" aria-controls="faq-3">
+              <p >Tôi có thể xem ở đâu?</p>
+              <i class="fa-solid fa-plus transition ease-in"></i>
+            </dt>
+            <dd id="faq-3" class="hidden text-lg font-light mt-6">
+              <p class="text-[2vw] px-5 pb-5">Xem mọi lúc, mọi nơi. Đăng nhập bằng tài khoản Netflix của bạn để xem ngay trên trang web netflix.com từ máy tính cá nhân, hoặc trên bất kỳ thiết bị nào có kết nối Internet và có cài đặt ứng dụng Netflix, bao gồm TV thông minh, điện thoại thông minh, máy tính bảng, thiết bị phát đa phương tiện trực tuyến và máy chơi game.
+              Bạn cũng có thể tải xuống các chương trình yêu thích bằng ứng dụng trên iOS hoặc Android. Vào phần nội dung đã tải xuống để xem trong khi di chuyển và khi không có kết nối Internet. Mang Netflix theo bạn đến mọi nơi.</p>
+            </dd>
+          </div>
+          <!-- Group 4 -->
+          <div class="group bg-[#2d2d2d] text-white">
+            <dt class="flex justify-between items-center text-[2vw] hover:bg-[#555555] p-5 border-2 border-black" aria-controls="faq-4">
+              <p >Làm thế nào để hủy?</p>
+              <i class="fa-solid fa-plus transition ease-in"></i>
+            </dt>
+            <dd id="faq-4" class="hidden text-lg font-light mt-6">
+              <p class="text-[2vw] px-5 pb-5">Netflix rất linh hoạt. Không có hợp đồng phiền toái, không ràng buộc. Bạn có thể dễ dàng hủy tài khoản trực tuyến chỉ trong hai cú nhấp chuột. Không mất phí hủy – bạn có thể bắt đầu hoặc ngừng tài khoản bất cứ lúc nào.</p>
+            </dd>
+          </div>
+          <!-- Group 5 -->
+          <div class="group bg-[#2d2d2d] text-white">
+            <dt class="flex justify-between items-center text-[2vw] hover:bg-[#555555] p-5 border-2 border-black" aria-controls="faq-5">
+              <p >Tôi có thể xem gì trên Netflix?</p>
+              <i class="fa-solid fa-plus transition ease-in"></i>
+            </dt>
+            <dd id="faq-5" class="hidden text-lg font-light mt-6">
+              <p class="text-[2vw] px-5 pb-5"> Netflix có một thư viện phong phú gồm các phim truyện, phim tài liệu, series, anime, tác phẩm giành giải thưởng của Netflix và nhiều nội dung khác. Xem không giới hạn bất cứ lúc nào bạn muốn.</p>
+            </dd>
+          </div>
+          <!-- Group 6 -->
+          <div class="group bg-[#2d2d2d] text-white">
+            <dt class="flex justify-between items-center text-[2vw] hover:bg-[#555555] p-5 border-2 border-black" aria-controls="faq-6">
+              <p>Netflix có phù hợp cho trẻ em không?</p>
+              <i class="fa-solid fa-plus transition ease-in"></i>
+            </dt>
+            <dd id="faq-6" class="hidden text-lg font-light mt-6">
+              <p class="text-[2vw] px-5 pb-5">
+                Trải nghiệm Netflix Trẻ em có sẵn trong gói dịch vụ của bạn, trao cho phụ huynh quyền kiểm soát trong khi các em có thể thưởng thức các bộ phim và chương trình phù hợp cho gia đình tại không gian riêng.
+                
+                Hồ sơ Trẻ em đi kèm tính năng kiểm soát của cha mẹ (được bảo vệ bằng mã PIN), cho phép bạn giới hạn độ tuổi cho nội dung con mình được phép xem, cũng như chặn những phim hoặc chương trình mà bạn không muốn các em nhìn thấy.</p>
+            </dd>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ready -->
+       <div id="ready" class="w-[60vw] h-[20vw] mx-auto flex flex-col text-center">
+       <h3 class="text-[1.2vw] text-white w-full mt-15 font-semibold">Bạn đã sẵn sàng xem chưa? Nhập email để tạo hoặc kích hoạt lại tư cách thành viên của bạn.</h3>
+        <div id="btn" class="flex mt-4 gap-4 mb-10 justify-between">
+          <div class="relative w-[75%]">
+            <input type="text" id="email" placeholder=" " class="text-white peer w-full border border-gray-400 rounded-md px-3 pt-5 pb-2"/>
+            <label for="email" class="absolute left-3 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm">
+              Địa chỉ email
+            </label>
+          </div>
+          <button class="h-13 w-[25%] text-2xl bg-red-600 flex justify-center items-center gap-5 cursor-pointer hover:bg-red-700" style="border-radius: 4px">
+            <p class="text-white">Bắt Đầu</p>
+            <i class="fa-solid fa-chevron-right text-white"></i>
+          </button>
+        </div>
+       </div>
+    </main>
+
+    <footer class="bg-black w-full pb-22">
+      <div class="mx-35 w-[80vw] gap-10 flex flex-col">
+        <a href="#" class="underline text-gray-400 decoration-gray-400">Bạn có câu hỏi? Liên hệ với chúng tôi.</a>
+        <div class="grid grid-cols-4 grid-rows-3 text-white gap-4">
+          <a href="#" class="underline text-gray-400 decoration-gray-400">Câu hỏi thường gặp</a>
+          <a href="#" class="underline text-gray-400 decoration-gray-400">Quan hệ với nhà đầu tư</a>
+          <a href="#" class="underline text-gray-400 decoration-gray-400">Quyền riêng tư</a>
+          <a href="#" class="underline text-gray-400 decoration-gray-400">Kiểm tra tốc độ</a>
+          <a href="#" class="underline text-gray-400 decoration-gray-400">Trung tâm trợ giúp</a>
+          <a href="#" class="underline text-gray-400 decoration-gray-400">Việc làm</a>
+          <a href="#" class="underline text-gray-400 decoration-gray-400">Tùy chọn cookie</a>
+          <a href="#" class="underline text-gray-400 decoration-gray-400">Thông báo pháp lý</a>
+          <a href="#" class="underline text-gray-400 decoration-gray-400">Tài khoản</a>
+          <a href="#" class="underline text-gray-400 decoration-gray-400">Các cách xem</a>
+          <a href="#" class="underline text-gray-400 decoration-gray-400">Thông tin doanh nghiệp</a>
+          <a href="#" class="underline text-gray-400 decoration-gray-400">Chỉ có trên Netflix</a>
+          <a href="#" class="underline text-gray-400 decoration-gray-400">Trung tâm đa phương tiện</a>
+          <a href="#" class="underline text-gray-400 decoration-gray-400">Điều khoản sử dụng</a>
+          <a href="#" class="underline text-gray-400 decoration-gray-400">Liên hệ với chúng tôi</a>
+        </div>
+        <button class="mt-10 pl-2 relative border border-neutral-500 text-white flex items-center p-1 w-35 h-8 justify-start gap-2" style="border-radius: 4px">
+          <img class="w-5 h-5 filter invert" src="/assets/asset 15.svg" alt="#"/>
+          <select class="w-[142px] h-9 absolute -left-0.5 pl-9 appearance-none cursor-pointer">
+            <!-- appearance-none: remove caret down of select -->
+            <option value="#">Tiếng Việt</option>
+            <option value="#">English</option>
+          </select>
+          <i class="fa-solid fa-caret-down absolute right-3"></i>
+        </button>
+        <p class="font-light text-gray-400">Netflix Việt Nam</p>
+      </div>
+    </footer>
+
+  </body>
+  <script src="./script.js"></script>
+</html>
